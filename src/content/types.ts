@@ -7,7 +7,7 @@ export type BilingualText = {
 
 export type ContentSource = {
   /** Which part this source supports; use separate entries when sources differ. */
-  appliesTo: "ja" | "vi" | "reading" | "all";
+  appliesTo: "identity" | "ja" | "vi" | "reading" | "all";
   name: string;
   url?: `https://${string}` | `http://${string}`;
   /** Edition, page, section, or another non-URL citation. */
@@ -41,7 +41,13 @@ export type Prayer<PrayerId extends string = string> = {
   /** Stable URL slug and reference key. Do not change when editing titles. */
   id: string;
   title: BilingualText & { reading: string };
-  category: "basic" | "daily" | "seasonal" | "rosary" | "marian";
+  category: "basic" | "daily" | "seasonal" | "rosary" | "marian" | "faith";
+  /** A canonical prayer whose identity is known but whose body is withheld. */
+  availability?: {
+    status: "unavailable";
+    ja: string;
+    vi: string;
+  };
   notes?: BilingualText;
   /** Context evidence is separate from sources for the prayer wording. */
   context?: {
@@ -49,6 +55,7 @@ export type Prayer<PrayerId extends string = string> = {
     source: Pick<ContentSource, "name" | "url" | "reference">;
   };
 } & ContentVerification & (
-  | { text: BilingualText; blocks?: never }
-  | { text?: never; blocks: readonly PrayerBlock<PrayerId>[] }
+  | { text: BilingualText; blocks?: never; availability?: never }
+  | { text?: never; blocks: readonly PrayerBlock<PrayerId>[]; availability?: never }
+  | { text?: never; blocks?: never; availability: { status: "unavailable"; ja: string; vi: string } }
 );

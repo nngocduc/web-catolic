@@ -513,12 +513,11 @@ const badEucharisticPrayerId: EucharisticPrayerId = 'eucharistic-prayer-v';`;
   assert(diagnostics.every(diagnostic=>[2322,2353,2820].includes(diagnostic.code)),diagnostics.map(diagnostic=>`${diagnostic.code}: ${ts.flattenDiagnosticMessageText(diagnostic.messageText," ")}`));
 });
 
-test("all canonical prayers and Rosary source/domain data remain unchanged",()=>{
+test("Rosary source/domain data remains unchanged alongside the expanded prayer library",()=>{
   const hashes={
-    "src/content/prayers.ts":"f880951918afebe758f6b946d286a850942d2220faf17dcf9d567c1b66c9e9dc",
     "src/content/rosary.ts":"4e64f54eb7ea4abbbefb40b9cf49896d0807a435d824a35536538e1ad358c90a",
     "src/domain/rosary.ts":"4e0cf66b3c554a5cbf75c9e9a116c76ef989b890d2504788a9a0848ee6f22173",
   };
   for(const[file,expected]of Object.entries(hashes)) assert.equal(crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex"),expected,file);
-  assert.equal(prayers.length,10);
+  assert.equal(prayers.length,15);
 });

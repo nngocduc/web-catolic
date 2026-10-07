@@ -97,7 +97,7 @@ test("Rosary data and expanded steps never store canonical prayer bodies", () =>
   }
 });
 
-test("all ten complete prayer record hashes are preserved", () => {
+test("the ten existing complete prayer record hashes are preserved", () => {
   const expected = {
     "lords-prayer":"982004ff63337a945e6868940b54ebf426df10663d713398d147c2fa8257e282",
     "ave-maria":"5ffd5f08bf411cf730613f7a6190a54a451cb73005fc99b91d2b227fc1d632c7",
@@ -111,7 +111,7 @@ test("all ten complete prayer record hashes are preserved", () => {
     "salve-regina":"a1d53c1d8b580263bb019a1448454c54ba9f22eb66776a07c7b0389c69344216",
   };
   const hash = data => crypto.createHash("sha256").update(data).digest("hex");
-  assert.equal(prayers.length, 10);
+  assert.equal(prayers.length, 15);
   for (const [id, expectedHash] of Object.entries(expected)) {
     assert.equal(hash(JSON.stringify(prayers.find(prayer => prayer.id === id))), expectedHash, id);
   }
@@ -137,8 +137,8 @@ const invalidBlock: PrayerBlock<PrayerId> = {id:'bad',kind:'prayer',prayerId:'un
 });
 
 test("one unique Salve Regina with scoped sources and aligned kana", () => {
-  assert.equal(prayers.length, 10);
-  assert.equal(new Set(prayers.map(prayer => prayer.id)).size, 10);
+  assert.equal(prayers.length, 15);
+  assert.equal(new Set(prayers.map(prayer => prayer.id)).size, 15);
   for (const prayer of prayers) assert.match(prayer.id, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
   const salve = prayers.find(prayer => prayer.id === "salve-regina");
   assert.equal(salve.category, "marian");

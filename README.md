@@ -1,6 +1,6 @@
 # 祈りのとも · Nhật–Việt
 
-A small mobile-first Catholic Japanese–Vietnamese app. Japanese is the primary language; Vietnamese supports understanding. The library contains ten prayers: 主の祈り, アヴェ・マリアの祈り, 栄唱, 十字架のしるしと祈り, 使徒信条, 食前の祈り, 食後の祈り, お告げの祈り, アレルヤの祈り, and 元后あわれみの母（Salve Regina）. All complete bilingual prayer records remain `unverified`. The 2022 CBCJ Mass opening is partially populated; new kana and Vietnamese support remain unverified/project-prepared. No independent Vietnamese sources have been recorded.
+A small mobile-first Catholic Japanese–Vietnamese app. Japanese is the primary language; Vietnamese supports understanding. The library contains fifteen canonical prayers: 主の祈り, アヴェ・マリアの祈り, 栄唱, 十字架のしるしと祈り, 使徒信条, 食前の祈り, 食後の祈り, お告げの祈り, アレルヤの祈り, and 元后あわれみの母（Salve Regina）, plus five faith and repentance prayers whose bodies remain unavailable until reuse permission is established. All complete bilingual prayer records remain `unverified`. The 2022 CBCJ Mass opening is partially populated; new kana and Vietnamese support remain unverified/project-prepared. Independent Vietnamese diocesan sources are recorded for the act of contrition and the faith, hope, and love prayers; reproduction permission remains unresolved.
 
 ## Development
 
@@ -43,7 +43,7 @@ src/domain/rosary.ts    Pure sequence expansion, movement, validation
 tests/                  Dependency-free sequence and browser checks
 ```
 
-Prayer `id` is its stable URL slug and reference key. Titles contain Japanese, required kana reading, and Vietnamese. Body text contains Japanese, optional reading, and Vietnamese. Each prayer also has a category, optional bilingual pastoral notes, and structured verification/source information. Store line breaks in strings as `\n`; the renderer preserves them.
+Prayer `id` is its stable URL slug and reference key. Titles contain Japanese, required kana reading, and Vietnamese. Body text contains Japanese, optional reading, and Vietnamese. Each prayer also has a category, optional bilingual pastoral notes, and structured verification/source information. The `faith` category is displayed as 信仰と回心の祈り. Body-unavailable canonical prayers use an explicit availability state and render concise Japanese and Vietnamese notices without fabricated text. The identity source scope records sources that establish a prayer name or catalog listing, not its wording. Store line breaks in strings as `\n`; the renderer preserves them.
 
 Keep IDs unique and stable. The Mass page remains an incomplete demonstration, not a full Mass order; see the Mass foundation below.
 

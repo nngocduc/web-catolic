@@ -626,6 +626,141 @@ Amen.`,
       },
     ],
   },
+  {
+    id: "act-of-contrition",
+    title: { ja: "悔い改めの祈り", reading: "くいあらためのいのり", vi: "Kinh Ăn Năn Tội" },
+    category: "faith",
+    status: "unverified",
+    availability: {
+      status: "unavailable",
+      ja: "日本語の本文は現在掲載していません。",
+      vi: "Hiện chưa đăng bản văn tiếng Việt.",
+    },
+    sources: [
+      {
+        appliesTo: "identity",
+        name: "カトリック中央協議会『日々の祈り 改訂版第二版』",
+        url: "https://www.cbcj.catholic.jp/publish/hibi/",
+        reference: "目次 1.9「悔い改めの祈り」。掲載確認のみで、祈り本文の出典ではありません。",
+        reproductionNote: "本文の再掲載許可は確認できていません。",
+      },
+      {
+        appliesTo: "vi",
+        name: "Tổng Giáo Phận Hà Nội, Kinh tối ngày thường cho các gia đình",
+        url: "https://www.tonggiaophanhanoi.org/kinh-toi-ngay-thuong-cho-cac-gia-dinh/",
+        reference: "Mục 2, Kinh Ăn Năn Tội; confirms a Vietnamese prayer text, not a translation of a Japanese edition.",
+        reproductionNote: "The source does not state permission to republish; text withheld pending a separate reuse basis.",
+      },
+    ],
+  },
+  {
+    id: "prayer-for-forgiveness",
+    title: { ja: "神のゆるしを願う祈り", reading: "かみのゆるしをねがういのり", vi: "Lời nguyện xin Thiên Chúa tha thứ" },
+    category: "faith",
+    status: "unverified",
+    availability: {
+      status: "unavailable",
+      ja: "日本語の本文は現在掲載していません。",
+      vi: "Hiện chưa đăng bản văn tiếng Việt.",
+    },
+    sources: [
+      {
+        appliesTo: "identity",
+        name: "カトリック中央協議会『日々の祈り 改訂版第二版』",
+        url: "https://www.cbcj.catholic.jp/publish/hibi/",
+        reference: "目次 1.10「神のゆるしを願う祈り」。掲載確認のみで、祈り本文の出典ではありません。",
+        reproductionNote: "本文の再掲載許可は確認できていません。",
+      },
+      {
+        appliesTo: "ja",
+        name: "カトリック麹町 聖イグナチオ教会",
+        url: "https://ignatius.gr.jp/news/archive/20200313_message.html",
+        reference: "『カトリック教会のカテキズム要約』所収として祈り本文を掲載。CBCJ掲載祈りと同一の版かは確認していません。",
+        reproductionNote: "掲載元・引用元とも再掲載許可を確認できていません。本文は収録していません。",
+      },
+    ],
+  },
+  {
+    id: "act-of-faith",
+    title: { ja: "神を信じる人の祈り", reading: "かみをしんじるひとのいのり", vi: "Kinh Tin" },
+    category: "faith",
+    status: "unverified",
+    availability: {
+      status: "unavailable",
+      ja: "日本語の本文は現在掲載していません。",
+      vi: "Hiện chưa đăng bản văn tiếng Việt.",
+    },
+    sources: [
+      {
+        appliesTo: "identity",
+        name: "カトリック中央協議会『日々の祈り 改訂版第二版』",
+        url: "https://www.cbcj.catholic.jp/publish/hibi/",
+        reference: "目次 1.11「神を信じる人の祈り」。掲載確認のみで、祈り本文の出典ではありません。",
+        reproductionNote: "本文の再掲載許可は確認できていません。",
+      },
+      {
+        appliesTo: "vi",
+        name: "Tổng Giáo Phận Hà Nội, Phần thứ nhất: Các kinh đọc sáng tối ngày thường và Chúa nhật",
+        url: "https://www.tonggiaophanhanoi.org/phan-thu-nhat-cac-kinh-doc-sang-toi-ngay-thuong-va-chua-nhat/",
+        reference: "Kinh Tin, in the morning and evening prayers section; a Vietnamese-language counterpart, not a translation of the Japanese edition.",
+        reproductionNote: "The source does not state permission to republish; text withheld pending a separate reuse basis.",
+      },
+    ],
+  },
+  {
+    id: "act-of-hope",
+    title: { ja: "神に希望をおく人の祈り", reading: "かみにきぼうをおくひとのいのり", vi: "Kinh Cậy" },
+    category: "faith",
+    status: "unverified",
+    availability: {
+      status: "unavailable",
+      ja: "日本語の本文は現在掲載していません。",
+      vi: "Hiện chưa đăng bản văn tiếng Việt.",
+    },
+    sources: [
+      {
+        appliesTo: "identity",
+        name: "カトリック中央協議会『日々の祈り 改訂版第二版』",
+        url: "https://www.cbcj.catholic.jp/publish/hibi/",
+        reference: "目次 1.12「神に希望をおく人の祈り」。掲載確認のみで、祈り本文の出典ではありません。",
+        reproductionNote: "本文の再掲載許可は確認できていません。",
+      },
+      {
+        appliesTo: "vi",
+        name: "Tổng Giáo Phận Hà Nội, Phần thứ nhất: Các kinh đọc sáng tối ngày thường và Chúa nhật",
+        url: "https://www.tonggiaophanhanoi.org/phan-thu-nhat-cac-kinh-doc-sang-toi-ngay-thuong-va-chua-nhat/",
+        reference: "Kinh Cậy, in the morning and evening prayers section; a Vietnamese-language counterpart, not a translation of the Japanese edition.",
+        reproductionNote: "The source does not state permission to republish; text withheld pending a separate reuse basis.",
+      },
+    ],
+  },
+  {
+    id: "act-of-love",
+    title: { ja: "神を愛する人の祈り", reading: "かみをあいするひとのいのり", vi: "Kinh Mến" },
+    category: "faith",
+    status: "unverified",
+    availability: {
+      status: "unavailable",
+      ja: "日本語の本文は現在掲載していません。",
+      vi: "Hiện chưa đăng bản văn tiếng Việt.",
+    },
+    sources: [
+      {
+        appliesTo: "identity",
+        name: "カトリック中央協議会『日々の祈り 改訂版第二版』",
+        url: "https://www.cbcj.catholic.jp/publish/hibi/",
+        reference: "目次 1.13「神を愛する人の祈り」。掲載確認のみで、祈り本文の出典ではありません。",
+        reproductionNote: "本文の再掲載許可は確認できていません。",
+      },
+      {
+        appliesTo: "vi",
+        name: "Tổng Giáo Phận Hà Nội, Phần thứ nhất: Các kinh đọc sáng tối ngày thường và Chúa nhật",
+        url: "https://www.tonggiaophanhanoi.org/phan-thu-nhat-cac-kinh-doc-sang-toi-ngay-thuong-va-chua-nhat/",
+        reference: "Kinh Kính Mến, in the morning and evening prayers section; a Vietnamese-language counterpart, not a translation of the Japanese edition.",
+        reproductionNote: "The source does not state permission to republish; text withheld pending a separate reuse basis.",
+      },
+    ],
+  },
 ] as const satisfies readonly Prayer[];
 
 // Consumers need all verification states, while reference IDs stay literal.

@@ -28,7 +28,12 @@ export function PrayerContent({ prayer, collapseNotes = false }: { prayer: Praye
           </details>
         </aside>
       )}
-      {prayer.text ? <BilingualText text={prayer.text} /> : prayer.blocks.map((block) => {
+      {prayer.availability ? (
+        <div className="prayer-unavailable" role="status">
+          <p>{prayer.availability.ja}</p>
+          <p lang="vi">{prayer.availability.vi}</p>
+        </div>
+      ) : prayer.text ? <BilingualText text={prayer.text} /> : prayer.blocks.map((block) => {
         if (block.kind === "text") {
           return <div className="prayer-block" key={block.id}><BilingualText text={block.text} /></div>;
         }

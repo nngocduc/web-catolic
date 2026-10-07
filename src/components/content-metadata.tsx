@@ -13,6 +13,7 @@ export function ContentStatus({ status }: { status: ContentVerification["status"
 }
 
 const sourceLabels: Record<ContentSource["appliesTo"], { ja: string; vi: string }> = {
+  identity: { ja: "祈りの名称・掲載確認", vi: "Xác nhận tên và sự hiện diện của kinh" },
   ja: { ja: "日本語本文", vi: "Bản văn tiếng Nhật" },
   vi: { ja: "ベトナム語訳", vi: "Bản dịch tiếng Việt" },
   reading: { ja: "読み方", vi: "Cách đọc" },

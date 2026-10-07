@@ -6,7 +6,7 @@ import { prayers } from "@/content/prayers";
 import type { Prayer } from "@/content/types";
 
 export const metadata: Metadata = { title: "祈り" };
-const categories: Record<Prayer["category"], string> = { basic: "基本の祈り", daily: "日々の祈り", seasonal: "季節の祈り", rosary: "ロザリオ", marian: "聖母の祈り" };
+const categories: Record<Prayer["category"], string> = { basic: "基本の祈り", daily: "日々の祈り", seasonal: "季節の祈り", rosary: "ロザリオ", marian: "聖母の祈り", faith: "信仰と回心の祈り" };
 
 export default function PrayersPage() {
   return (

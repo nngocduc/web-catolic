@@ -13,8 +13,13 @@ export function loadTypeScript(file) {
     compilerOptions: { module: ts.ModuleKind.CommonJS },
   }).outputText;
   new Function("exports", "require", code)(exports, id => {
-    if (!id.startsWith(".")) throw new Error(`Unexpected nonlocal test import: ${id}`);
-    return loadTypeScript(path.resolve(path.dirname(file), `${id}.ts`));
+    const dependency = id.startsWith("@/")
+      ? path.resolve("src", `${id.slice(2)}.ts`)
+      : id.startsWith(".")
+        ? path.resolve(path.dirname(file), `${id}.ts`)
+        : undefined;
+    if (!dependency) throw new Error(`Unexpected nonlocal test import: ${id}`);
+    return loadTypeScript(dependency);
   });
   return exports;
 }
